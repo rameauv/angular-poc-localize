@@ -7,4 +7,5 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Page1Page {
+  textToBeTranslated = $localize`:meaning|description@@textTranslatedWith$Localize:this text is translated using the $localize`;
 }

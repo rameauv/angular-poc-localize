@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {Page1Page} from "./page-1.page";
 import {RouterModule, Routes} from "@angular/router";
+import {ComponentShowingText} from "../../components/component-showing-text";
 
 const routes: Routes = [{
   path: '',
@@ -9,7 +10,8 @@ const routes: Routes = [{
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComponentShowingText
   ],
   declarations: [
     Page1Page

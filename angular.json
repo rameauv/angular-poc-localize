@@ -8,7 +8,7 @@
         "sourceLocale": "en",
         "locales": {
           "ko": {
-            "translation": "src/assets/i18n/local.ko.json"
+            "translation": "src/assets/i18n/ko.json"
           }
         }
       },
@@ -26,7 +26,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "localize": ["en"],
             "outputPath": "dist/angular-poc-localize",
             "index": "src/index.html",
             "main": "src/main.ts",

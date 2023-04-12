@@ -8,3 +8,14 @@
 <p i18n="meaning|description@@translationWithI18nAttribute">this is a translation with the i18n attribute</p>
 <p>translation with the i18n- attribute</p>
 <app-component-showing-text i18n-textToShow="meaning|description@@translationWtithI18n-Attribute" textToShow="this is a translation with the i18n- attribute"></app-component-showing-text>
+<p>translation with $localize</p>
+<p>{{textToBeTranslated}}</p>
+<section>
+  <h2>{{ translations['builtInPipesTitle'] }}</h2>
+
+  <ul>
+    <li>{{ translations['dateLabel'] }} {{ today | date:'mediumDate' }}</li>
+    <li>{{ translations['timeLabel'] }} {{ today | date:'mediumTime' }}</li>
+    <li>{{ translations['currencyLabel'] }} {{ 12.34 | currency }}</li>
+  </ul>
+</section>

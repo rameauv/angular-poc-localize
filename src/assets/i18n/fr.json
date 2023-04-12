@@ -1,0 +1,13 @@
+{
+  "locale": "fr",
+  "translations": {
+    "translationWithI18nAttribute": "fr this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "fr this is a translation with the i18n- attribute",
+    "textTranslatedWith$Localize": "fr this text is translated using the $localize",
+    "builtInPipesTitle": "fr Built-in pipes",
+    "dateLabel": "fr Date:",
+    "timeLabel": "fr Time:",
+    "currencyLabel": "fr Currency:",
+    "customPipesTitle": "fr Custom pipes"
+  }
+}

@@ -2,7 +2,7 @@ import {NgModule} from "@angular/core";
 import {Page2Page} from "./page-2.page";
 import {RouterModule, Routes} from "@angular/router";
 import {ComponentShowingText} from "../../components/component-showing-text";
-import {NgOptimizedImage} from "@angular/common";
+import {CurrencyPipe, DatePipe} from "@angular/common";
 
 const routes: Routes = [{
   path: '',
@@ -13,7 +13,8 @@ const routes: Routes = [{
   imports: [
     RouterModule.forChild(routes),
     ComponentShowingText,
-    NgOptimizedImage
+    DatePipe,
+    CurrencyPipe
   ],
   declarations: [
     Page2Page
