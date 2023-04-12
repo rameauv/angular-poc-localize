@@ -8,6 +8,10 @@
 <p i18n="meaning|description@@translationWithI18nAttribute">this is a translation with the i18n attribute</p>
 <p>translation with the i18n- attribute</p>
 <app-component-showing-text i18n-textToShow="meaning|description@@translationWtithI18n-Attribute" textToShow="this is a translation with the i18n- attribute"></app-component-showing-text>
+
+
+<!--According to the principle of Angular Ivy compiler operations, translations in the template are performed only once.-->
+<!--Therefore, if we want to achieve dynamic translation, we must use component code and not a template to mark text for translation.-->
 <p>translation with $localize</p>
 <p>{{textToBeTranslated}}</p>
 <section>

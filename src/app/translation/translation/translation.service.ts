@@ -1,27 +1,41 @@
 import {BehaviorSubject, Observable} from "rxjs";
 import {clearTranslations, loadTranslations} from "@angular/localize";
 import {Router} from "@angular/router";
-import {Injectable} from "@angular/core";
+import {Inject, Injectable, Optional} from "@angular/core";
+import {TRANSLATION_OPTIONS} from "./translation-options-injection-token";
+import {TranslationOptions} from "./translationOptions";
 
+
+// this is a service to manage anything related to translations
 @Injectable()
 export class TranslationService {
-  private readonly currentLocaleBS = new BehaviorSubject('en');
-  private readonly availableLocales = ['ko', 'fr', 'fr-CA', 'en'];
-  private readonly defaultLocale = 'ko';
+
+  private readonly currentLocaleBS: BehaviorSubject<string>;
+  private readonly availableLocales: string[];
+  private readonly defaultLocale: string;
 
   readonly currentLocale$: Observable<string> = this.currentLocaleBS
 
+  // loading state, when loading a new locale, used in the custom RouteReuseStrategy to detect if components should be reloaded
   state: 'translated' | 'loading' = 'translated';
 
-  constructor() {
+  constructor(@Optional() @Inject(TRANSLATION_OPTIONS) options?: TranslationOptions) {
+    if (options === undefined) {
+      throw new Error('TranslationModule must be imported with .forRoot');
+    }
+    this.availableLocales = options.availableLocales;
+    this.defaultLocale = options.defaultLocale;
+    this.currentLocaleBS = new BehaviorSubject(this.defaultLocale);
   }
 
+  // this methode should only be called once, when the application start, for example in an initialization functions using the injection token APP_INITIALIZER
   async init(locale: string) {
     const availableLocale = this.getAvailableLocale(locale);
     await this.setLocaleData(availableLocale);
     this.currentLocaleBS.next(availableLocale);
   }
 
+  // update the locale being displayed
   async updateCurrentLocale(locale: string, router: Router) {
     const availableLocale = this.getAvailableLocale(locale);
 
@@ -37,6 +51,7 @@ export class TranslationService {
     this.currentLocaleBS.next(availableLocale);
   }
 
+  // get the currently displayed locale
   getCurrentLocale() {
     return this.currentLocaleBS.getValue();
   }

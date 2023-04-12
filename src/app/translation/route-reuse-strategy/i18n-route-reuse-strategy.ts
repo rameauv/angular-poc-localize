@@ -11,6 +11,7 @@ export class I18nRouteReuseStrategy extends BaseRouteReuseStrategy {
     super();
   }
 
+  // detect if components should be reloaded
   override shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {
     return this.localeService.state === 'loading'
       ? false
