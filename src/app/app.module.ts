@@ -5,8 +5,12 @@ import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
-import {TranslationModule, TranslationRouteReuseStrategyModule, TranslationsAppInitializedModule} from "./translation";
-import {TranslationOptions} from "./translation/translation/translationOptions";
+import {
+  TranslationModule,
+  TranslationOptions,
+  TranslationRouteReuseStrategyModule,
+  TranslationsAppInitializedModule
+} from "./translation";
 
 // localization for Date and currency pipes
 import '@angular/common/locales/global/uk';
