@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "extract-i18n": "ng extract-i18n",
+    "validate-i18n": "ng build -c=validate-i18n",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

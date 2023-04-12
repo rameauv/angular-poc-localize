@@ -9,6 +9,12 @@
         "locales": {
           "ko": {
             "translation": "src/assets/i18n/ko.json"
+          },
+          "fr": {
+            "translation": "src/assets/i18n/fr.json"
+          },
+          "fr-CA": {
+            "translation": "src/assets/i18n/fr-CA.json"
           }
         }
       },
@@ -85,7 +91,10 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-poc-localize:build"
+            "browserTarget": "angular-poc-localize:build",
+            "format": "json",
+            "outFile": "en.json",
+            "outputPath": "src/assets/i18n"
           }
         },
         "test": {
