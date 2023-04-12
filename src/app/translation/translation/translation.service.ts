@@ -14,7 +14,7 @@ export class TranslationService {
   private readonly availableLocales: string[];
   private readonly defaultLocale: string;
 
-  readonly currentLocale$: Observable<string> = this.currentLocaleBS
+  readonly currentLocale$: Observable<string>;
 
   // loading state, when loading a new locale, used in the custom RouteReuseStrategy to detect if components should be reloaded
   state: 'translated' | 'loading' = 'translated';
@@ -26,6 +26,7 @@ export class TranslationService {
     this.availableLocales = options.availableLocales;
     this.defaultLocale = options.defaultLocale;
     this.currentLocaleBS = new BehaviorSubject(this.defaultLocale);
+    this.currentLocale$ = this.currentLocaleBS;
   }
 
   // this methode should only be called once, when the application start, for example in an initialization functions using the injection token APP_INITIALIZER

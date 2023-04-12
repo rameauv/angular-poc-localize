@@ -5,18 +5,7 @@
   "projects": {
     "angular-poc-localize": {
       "i18n": {
-        "sourceLocale": "en",
-        "locales": {
-          "ko": {
-            "translation": "src/assets/i18n/ko.json"
-          },
-          "fr": {
-            "translation": "src/assets/i18n/fr.json"
-          },
-          "fr-CA": {
-            "translation": "src/assets/i18n/fr-CA.json"
-          }
-        }
+        "sourceLocale": "en"
       },
       "projectType": "application",
       "schematics": {
