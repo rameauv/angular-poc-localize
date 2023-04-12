@@ -1,9 +1,9 @@
-import {LocaleService} from "./locale.service";
+import {TranslationService} from "../translation/translation.service";
 import {Injectable} from "@angular/core";
 
-@Injectable({providedIn: 'root'})
+@Injectable()
 export class LocaleIdService extends String {
-  constructor(private localeService: LocaleService) {
+  constructor(private localeService: TranslationService) {
     super();
   }
 

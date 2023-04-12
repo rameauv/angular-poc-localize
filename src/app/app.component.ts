@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {Router} from "@angular/router";
-import {LocaleService} from "./services/locale.service";
+import {TranslationService} from "./translation/translation/translation.service";
 
 @Component({
   selector: 'app-root',
@@ -32,7 +32,7 @@ export class AppComponent implements OnDestroy, OnInit {
   currentLocale: string;
   private currentLocaleSubscription?: Subscription;
 
-  constructor(private localeService: LocaleService, private cdr: ChangeDetectorRef, private router: Router) {
+  constructor(private localeService: TranslationService, private cdr: ChangeDetectorRef, private router: Router) {
     this.currentLocale = this.localeService.getCurrentLocale();
   }
 

@@ -1,13 +1,13 @@
 import {Injectable} from "@angular/core";
 import {ActivatedRouteSnapshot, BaseRouteReuseStrategy} from "@angular/router";
-import {LocaleService} from "./locale.service";
+import {TranslationService} from "../translation/translation.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class I18nRouteReuseStrategyService extends BaseRouteReuseStrategy {
+export class I18nRouteReuseStrategy extends BaseRouteReuseStrategy {
 
-  constructor(private localeService: LocaleService) {
+  constructor(private localeService: TranslationService) {
     super();
   }
 

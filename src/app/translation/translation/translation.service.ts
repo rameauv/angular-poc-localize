@@ -3,8 +3,8 @@ import {clearTranslations, loadTranslations} from "@angular/localize";
 import {Router} from "@angular/router";
 import {Injectable} from "@angular/core";
 
-@Injectable({providedIn: 'root'})
-export class LocaleService {
+@Injectable()
+export class TranslationService {
   private readonly currentLocaleBS = new BehaviorSubject('en');
   private readonly availableLocales = ['ko', 'fr', 'fr-CA', 'en'];
   private readonly defaultLocale = 'ko';

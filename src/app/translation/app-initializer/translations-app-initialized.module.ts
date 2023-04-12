@@ -1,6 +1,6 @@
 import {APP_INITIALIZER, NgModule} from "@angular/core";
 import {factory} from "./factory";
-import {LocaleService} from "../../services/locale.service";
+import {TranslationService} from "../translation/translation.service";
 
 @NgModule({
   providers: [
@@ -8,7 +8,7 @@ import {LocaleService} from "../../services/locale.service";
       provide: APP_INITIALIZER,
       multi: true,
       useFactory: factory,
-      deps: [LocaleService]
+      deps: [TranslationService]
     }
   ]
 })
