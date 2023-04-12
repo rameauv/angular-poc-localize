@@ -10,7 +10,9 @@ import {I18nRouteReuseStrategyService} from "./services/i18n-route-reuse-strateg
 import '@angular/common/locales/global/uk';
 import '@angular/common/locales/global/ko';
 import '@angular/common/locales/global/fr';
+
 import {LocaleIdService} from "./services/locale-id.service";
+import {TranslationsAppInitializedModule} from "./app-initializers/translations/translations-app-initialized.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {LocaleIdService} from "./services/locale-id.service";
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    TranslationsAppInitializedModule
   ],
   providers: [
     {

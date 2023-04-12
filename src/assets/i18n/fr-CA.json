@@ -1,0 +1,13 @@
+{
+  "locale": "fr-CA",
+  "translations": {
+    "translationWithI18nAttribute": "fr-CA this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "fr-CA this is a translation with the i18n- attribute",
+    "textTranslatedWith$Localize": "fr-CA this text is translated using the $localize",
+    "builtInPipesTitle": "fr-CA Built-in pipes",
+    "dateLabel": "fr-CA Date:",
+    "timeLabel": "fr-CA Time:",
+    "currencyLabel": "fr-CA Currency:",
+    "customPipesTitle": "fr-CA Custom pipes"
+  }
+}

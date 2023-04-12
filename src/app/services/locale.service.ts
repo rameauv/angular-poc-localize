@@ -6,23 +6,35 @@ import {Injectable} from "@angular/core";
 @Injectable({providedIn: 'root'})
 export class LocaleService {
   private readonly currentLocaleBS = new BehaviorSubject('en');
+  private readonly availableLocales = ['ko', 'fr', 'fr-CA', 'en'];
+  private readonly defaultLocale = 'ko';
+
   readonly currentLocale$: Observable<string> = this.currentLocaleBS
+
   state: 'translated' | 'loading' = 'translated';
 
   constructor() {
   }
 
+  async init(locale: string) {
+    const availableLocale = this.getAvailableLocale(locale);
+    await this.setLocaleData(availableLocale);
+    this.currentLocaleBS.next(availableLocale);
+  }
+
   async updateCurrentLocale(locale: string, router: Router) {
+    const availableLocale = this.getAvailableLocale(locale);
+
     this.state = 'loading';
 
-    await this.setLocaleData(locale)
+    await this.setLocaleData(availableLocale)
 
     await router.navigateByUrl(router.url, {
       onSameUrlNavigation: 'reload'
     });
 
     this.state = 'translated';
-    this.currentLocaleBS.next(locale);
+    this.currentLocaleBS.next(availableLocale);
   }
 
   getCurrentLocale() {
@@ -49,5 +61,20 @@ export class LocaleService {
     } catch (error: unknown) {
       console.error(error);
     }
+  }
+
+  private getAvailableLocale(locale: string) {
+    const perfectMatch = this.availableLocales.find(localeIt => localeIt === locale);
+    if (perfectMatch !== undefined) {
+      return perfectMatch;
+    }
+    const lang = locale.substring(0, 2);
+    const langMatch = this.availableLocales.find(localeIt =>
+      localeIt === lang
+    );
+    if (langMatch !== undefined) {
+      return langMatch;
+    }
+    return this.defaultLocale;
   }
 }

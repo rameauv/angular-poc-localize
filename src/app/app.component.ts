@@ -21,8 +21,8 @@ export class AppComponent implements OnDestroy, OnInit {
       label: 'korean'
     },
     {
-      id: 'uk',
-      label: 'ukrainian'
+      id: 'fr-CA',
+      label: 'canadian french'
     },
     {
       id: 'fr',
