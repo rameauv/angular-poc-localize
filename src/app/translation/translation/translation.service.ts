@@ -57,8 +57,8 @@ export class TranslationService {
     return this.currentLocaleBS.getValue();
   }
 
-  private setDocumentI18nAttributes(locale: string) {
-    globalThis.document.documentElement.lang = locale;
+  private setDocumentI18nAttributes(lang: string) {
+    globalThis.document.documentElement.lang = lang;
   }
 
   private async setLocaleData(locale: string) {
@@ -75,7 +75,7 @@ export class TranslationService {
       loadTranslations(translations);
       this.setDocumentI18nAttributes(locale);
     } catch (error: unknown) {
-      console.error(error);
+      console.error(error); // log the error
     }
   }
 
@@ -84,6 +84,7 @@ export class TranslationService {
     if (perfectMatch !== undefined) {
       return perfectMatch;
     }
+
     const lang = locale.substring(0, 2);
     const langMatch = this.availableLocales.find(localeIt =>
       localeIt === lang
@@ -91,6 +92,7 @@ export class TranslationService {
     if (langMatch !== undefined) {
       return langMatch;
     }
+
     return this.defaultLocale;
   }
 }

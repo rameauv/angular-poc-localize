@@ -4,4 +4,5 @@ export {LocaleIdService} from './locale-id/locale-id.service';
 export {TranslationRouteReuseStrategyModule} from './route-reuse-strategy/translation-route-reuse-strategy.module';
 export {I18nRouteReuseStrategy} from './route-reuse-strategy/i18n-route-reuse-strategy';
 export {TranslationModule} from './translation/translation.module';
-export {TranslationOptions} from './translation/translationOptions'
+export {TranslationOptions} from './translation/translationOptions';
+export {TRANSLATION_OPTIONS} from './translation/translation-options-injection-token';

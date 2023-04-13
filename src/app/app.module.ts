@@ -17,10 +17,9 @@ import '@angular/common/locales/global/uk';
 import '@angular/common/locales/global/ko';
 import '@angular/common/locales/global/fr';
 
-const translationOptions: TranslationOptions = {
-  availableLocales: ['ko', 'fr', 'fr-CA', 'en'],
-  defaultLocale: 'ko'
-}
+import {translationOptionsProvider} from "../helpers/translation-options-provider";
+
+const translationOptions = translationOptionsProvider()
 
 @NgModule({
   declarations: [
