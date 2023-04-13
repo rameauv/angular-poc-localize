@@ -1,0 +1,8 @@
+{
+  "locale": "en",
+  "translations": {
+    "translationWithI18nAttribute": "this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
+    "textTranslatedWith$Localize": "this text is translated using the $localize"
+  }
+}

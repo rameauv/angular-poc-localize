@@ -1,0 +1,8 @@
+{
+  "locale": "ko",
+  "translations": {
+    "translationWithI18nAttribute": "ko this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "ko this is a translation with the i18n- attribute",
+    "textTranslatedWith$Localize": "ko this text is translated using the $localize"
+  }
+}
