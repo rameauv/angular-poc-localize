@@ -1,27 +1,21 @@
-# AngularPocLocalize
+# I18n
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+## Angular-localize
 
-## Development server
+Shortcomings:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Lot of boilerplate code
+- Each time the lang change all the components have to be re instantiated, which is not the case for transloco. It might not impact performances though because the language will probably not change frequently.
+- It’s not possible to use the “i18n” attribute (only $localize)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Xi18n
 
-## Build
+- Renamed to extract-i18n
+- It’s not possible to use this tool with transloco, but a similar tool exist for using with transloco https://github.com/ngneat/transloco-keys-manager
+- It detect the use of $localize or the attribute “i18n” to automatically generate a translation file.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## XLIFF
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Xliff can be usefully when using a translation company to have to translations be done. Overkill for us
