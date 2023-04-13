@@ -11,8 +11,7 @@ export class Page1Page {
   readonly name = 'Jean-marc';
   readonly itemCount = 4;
 
-  readonly textToBeTranslated = $localize`:meaning|description@@textTranslatedWith$Localize:en this text is translated using the $localize`;
-  readonly complexPathTranslation = $localize`:@@complex.translation.path:en this is a translation with a complex path`;
+  readonly textToBeTranslated = $localize`:@@textTranslatedWith$Localize:en this text is translated using the $localize`;
   readonly translationWithInterpolation = $localize`:@@translationWithInterpolation:Hi ${this.name}! There are ${this.itemCount} items.`;
   readonly pluralTranslation = {
     '=0': $localize`:@@plural_0:en No messages.`,

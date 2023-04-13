@@ -2,7 +2,7 @@
   "locale": "ko",
   "translations": {
     "translationWithI18nAttribute": "ko this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "ko this is a translation with the i18n- attribute",
+    "translationWithI18n-Attribute": "ko this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "ko this text is translated using the $localize",
     "translationWithInterpolation": "ko Hi {$PH}! There are {$PH_1} items.",
     "plural_0": "ko No messages.",
@@ -14,12 +14,7 @@
     "builtInPipesTitle": "ko Built-in pipes",
     "dateLabel": "ko Date:",
     "timeLabel": "ko Time:",
-    "currkocyLabel": "ko Currkocy:",
-    "customPipesTitle": "ko Custom pipes",
-    "complex": {
-      "translation": {
-        "path": "ko complex translation path"
-      }
-    }
+    "currencyLabel": "ko Currency:",
+    "customPipesTitle": "ko Custom pipes"
   }
 }

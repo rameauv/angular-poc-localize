@@ -2,7 +2,7 @@
   "locale": "fr",
   "translations": {
     "translationWithI18nAttribute": "fr this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "fr this is a translation with the i18n- attribute",
+    "translationWithI18n-Attribute": "fr this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "fr this text is translated using the $localize",
     "translationWithInterpolation": "fr Hi {$PH}! There are {$PH_1} items.",
     "plural_0": "fr No messages.",
@@ -14,12 +14,7 @@
     "builtInPipesTitle": "fr Built-in pipes",
     "dateLabel": "fr Date:",
     "timeLabel": "fr Time:",
-    "currfrcyLabel": "fr Currfrcy:",
-    "customPipesTitle": "fr Custom pipes",
-    "complex": {
-      "translation": {
-        "path": "fr complex translation path"
-      }
-    }
+    "currencyLabel": "fr Currfrcy:",
+    "customPipesTitle": "fr Custom pipes"
   }
 }
