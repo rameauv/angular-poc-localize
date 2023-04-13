@@ -1,8 +1,8 @@
 {
   "locale": "fr-CA",
   "translations": {
-    "translationWithI18nAttribute": "this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
+    "translationWithI18nAttribute": "fr-CA this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "fr-CA this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "fr-CA this text is translated using the $localize",
     "translationWithInterpolation": "fr-CA Hi {$PH}! There are {$PH_1} items.",
     "plural_0": "fr-CA No messages.",

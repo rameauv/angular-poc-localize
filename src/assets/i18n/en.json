@@ -1,8 +1,8 @@
 {
   "locale": "en",
   "translations": {
-    "translationWithI18nAttribute": "this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
+    "translationWithI18nAttribute": "en this is a translation with the i18n attribute",
+    "translationWithI18n-Attribute": "en this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "en this text is translated using the $localize",
     "complex.translation.path": "en this is a translation with a complex path",
     "translationWithInterpolation": "Hi {$PH}! There are {$PH_1} items.",
