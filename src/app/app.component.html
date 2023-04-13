@@ -1,1 +1,10 @@
+<select [ngModel]="currentLocale" (ngModelChange)="handleLocaleChange($event)">
+  <option
+    *ngFor="let local of localeOptions"
+    [value]="local.id"
+  >
+    {{local.label}}
+  </option>
+</select>
+
 <router-outlet></router-outlet>

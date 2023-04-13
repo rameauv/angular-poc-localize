@@ -1,6 +1,8 @@
 import {NgModule} from "@angular/core";
 import {Page1Page} from "./page-1.page";
 import {RouterModule, Routes} from "@angular/router";
+import {ComponentShowingText} from "../../components/component-showing-text";
+import {CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe} from "@angular/common";
 
 const routes: Routes = [{
   path: '',
@@ -9,7 +11,12 @@ const routes: Routes = [{
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComponentShowingText,
+    CurrencyPipe,
+    DatePipe,
+    I18nPluralPipe,
+    I18nSelectPipe
   ],
   declarations: [
     Page1Page
