@@ -1,13 +1,25 @@
 {
   "locale": "fr-CA",
   "translations": {
-    "translationWithI18nAttribute": "fr-CA this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "fr-CA this is a translation with the i18n- attribute",
+    "translationWithI18nAttribute": "this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "fr-CA this text is translated using the $localize",
+    "translationWithInterpolation": "fr-CA Hi {$PH}! There are {$PH_1} items.",
+    "plural_0": "fr-CA No messages.",
+    "plural_1": "fr-CA One message.",
+    "plural_other": "fr-CA # messages.",
+    "selectTranslation_male": "fr-CA Invite him.",
+    "selectTranslation_female": "fr-CA Invite her.",
+    "selectTranslation_other": "fr-CA Invite them.",
     "builtInPipesTitle": "fr-CA Built-in pipes",
     "dateLabel": "fr-CA Date:",
     "timeLabel": "fr-CA Time:",
-    "currencyLabel": "fr-CA Currency:",
-    "customPipesTitle": "fr-CA Custom pipes"
+    "currfr-CAcyLabel": "fr-CA Currfr-CAcy:",
+    "customPipesTitle": "fr-CA Custom pipes",
+    "complex": {
+      "translation": {
+        "path": "fr-CA complex translation path"
+      }
+    }
   }
 }

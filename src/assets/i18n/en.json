@@ -3,11 +3,19 @@
   "translations": {
     "translationWithI18nAttribute": "this is a translation with the i18n attribute",
     "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
-    "textTranslatedWith$Localize": "this text is translated using the $localize",
-    "builtInPipesTitle": "Built-in pipes",
-    "dateLabel": "Date:",
-    "timeLabel": "Time:",
-    "currencyLabel": "Currency:",
-    "customPipesTitle": "Custom pipes"
+    "textTranslatedWith$Localize": "en this text is translated using the $localize",
+    "complex.translation.path": "en this is a translation with a complex path",
+    "translationWithInterpolation": "Hi {$PH}! There are {$PH_1} items.",
+    "plural_0": "en No messages.",
+    "plural_1": "en One message.",
+    "plural_other": "en # messages.",
+    "selectTranslation_male": "en Invite him.",
+    "selectTranslation_female": "en Invite her.",
+    "selectTranslation_other": "en Invite them.",
+    "builtInPipesTitle": "en Built-in pipes",
+    "dateLabel": "en Date:",
+    "timeLabel": "en Time:",
+    "currencyLabel": "en Currency:",
+    "customPipesTitle": "en Custom pipes"
   }
 }

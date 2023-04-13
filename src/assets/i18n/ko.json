@@ -1,13 +1,25 @@
 {
   "locale": "ko",
   "translations": {
-    "translationWithI18nAttribute": "ko this is a translation with the i18n attribute",
-    "translationWtithI18n-Attribute": "ko this is a translation with the i18n- attribute",
+    "translationWithI18nAttribute": "this is a translation with the i18n attribute",
+    "translationWtithI18n-Attribute": "this is a translation with the i18n- attribute",
     "textTranslatedWith$Localize": "ko this text is translated using the $localize",
+    "translationWithInterpolation": "ko Hi {$PH}! There are {$PH_1} items.",
+    "plural_0": "ko No messages.",
+    "plural_1": "ko One message.",
+    "plural_other": "ko # messages.",
+    "selectTranslation_male": "ko Invite him.",
+    "selectTranslation_female": "ko Invite her.",
+    "selectTranslation_other": "ko Invite them.",
     "builtInPipesTitle": "ko Built-in pipes",
     "dateLabel": "ko Date:",
     "timeLabel": "ko Time:",
-    "currencyLabel": "ko Currency:",
-    "customPipesTitle": "ko Custom pipes"
+    "currkocyLabel": "ko Currkocy:",
+    "customPipesTitle": "ko Custom pipes",
+    "complex": {
+      "translation": {
+        "path": "ko complex translation path"
+      }
+    }
   }
 }

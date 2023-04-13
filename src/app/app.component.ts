@@ -37,7 +37,6 @@ export class AppComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit() {
-    console.log(this.localeService);
     this.currentLocaleSubscription = this.localeService.currentLocale$.subscribe(this.currentLocalStreamHandler);
   }
 
@@ -46,12 +45,10 @@ export class AppComponent implements OnDestroy, OnInit {
   }
 
   handleLocaleChange(locale: string) {
-    console.log(this.localeService);
     this.localeService.updateCurrentLocale(locale, this.router);
   }
 
   currentLocalStreamHandler = (locale: string) => {
-    console.log(locale);
     this.currentLocale = locale;
     this.cdr.detectChanges();
   };

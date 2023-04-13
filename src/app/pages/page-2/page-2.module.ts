@@ -2,7 +2,7 @@ import {NgModule} from "@angular/core";
 import {Page2Page} from "./page-2.page";
 import {RouterModule, Routes} from "@angular/router";
 import {ComponentShowingText} from "../../components/component-showing-text";
-import {CurrencyPipe, DatePipe} from "@angular/common";
+import {CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe} from "@angular/common";
 
 const routes: Routes = [{
   path: '',
@@ -10,12 +10,14 @@ const routes: Routes = [{
 }]
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes),
-    ComponentShowingText,
-    DatePipe,
-    CurrencyPipe
-  ],
+    imports: [
+        RouterModule.forChild(routes),
+        ComponentShowingText,
+        DatePipe,
+        CurrencyPipe,
+        I18nPluralPipe,
+        I18nSelectPipe
+    ],
   declarations: [
     Page2Page
   ],

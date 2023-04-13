@@ -8,16 +8,31 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 })
 export class Page2Page {
 
-  readonly textToBeTranslated = $localize`:meaning|description@@textTranslatedWith$Localize:this text is translated using the $localize`;
-
   readonly today = new Date();
+  readonly name = 'Jean-marc';
+  readonly itemCount = 4;
 
-  readonly translations = {
-    builtInPipesTitle: $localize`:@@builtInPipesTitle:Built-in pipes`,
-    dateLabel: $localize`:@@dateLabel:Date:`,
-    timeLabel: $localize`:@@timeLabel:Time:`,
-    currencyLabel: $localize`:@@currencyLabel:Currency:`,
-    customPipesTitle: $localize`:@@customPipesTitle:Custom pipes`,
+  readonly textToBeTranslated = $localize`:meaning|description@@textTranslatedWith$Localize:en this text is translated using the $localize`;
+  readonly complexPathTranslation = $localize`:@@complex.translation.path:en this is a translation with a complex path`;
+  readonly translationWithInterpolation = $localize`:@@translationWithInterpolation:Hi ${this.name}! There are ${this.itemCount} items.`;
+  readonly pluralTranslation = {
+    '=0': $localize`:@@plural_0:en No messages.`,
+    '=1': $localize`:@@plural_1:en One message.`,
+    'other': $localize`:@@plural_other:en # messages.`
+  };
+  readonly selectTranslationMap = {
+    'male': $localize`:@@selectTranslation_male:en Invite him.`,
+    'female': $localize`:@@selectTranslation_female:en Invite her.`,
+    'other': $localize`:@@selectTranslation_other:en Invite them.`
+  };
+
+
+  readonly pipeTranslations = {
+    builtInPipesTitle: $localize`:@@builtInPipesTitle:en Built-in pipes`,
+    dateLabel: $localize`:@@dateLabel:en Date:`,
+    timeLabel: $localize`:@@timeLabel:en Time:`,
+    currencyLabel: $localize`:@@currencyLabel:en Currency:`,
+    customPipesTitle: $localize`:@@customPipesTitle:en Custom pipes`,
   };
 
 }
